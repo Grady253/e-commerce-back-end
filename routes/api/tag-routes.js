@@ -20,7 +20,9 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   Tag.findOne({
-    where:req.params.id,
+    where:{
+      id:req.params.id,
+    },
     // be sure to include its associated Product data
     include:{
       model:Product,
@@ -30,9 +32,11 @@ router.get('/:id', (req, res) => {
     if(!tagData){
       res.status(404).json({
         alert:"id not found",
-      })
+      });
       return res.json(tagData);
-    }});
+    };
+    return res.json(tagData);
+  });
 });
 
 router.post('/', (req, res) => {
@@ -49,12 +53,10 @@ router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
   Tag.update(req.body,{
     where:{
-      id:req.params.id
+      tag_id:req.params.id
     }
   }).then(tagData => res.json(tagData))
-  .catch(err=>{
-    console.log(err);
-  });
+  .catch(err=>{console.log(err);});
 });
 
 router.delete('/:id', (req, res) => {
