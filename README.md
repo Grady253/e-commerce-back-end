@@ -15,18 +15,15 @@
  [test](#test) |
 
  ## Installation
- The steps to install the application are .
+ The steps to install the application is to run npm installation which will install the dependencies, Then you'll run MySQL and source the database, then run node seed which will seed the data, and finally you'll run node server.js.
 
  ## Usage
 [Homework 13 Demo.webm](https://user-images.githubusercontent.com/104874843/197676219-1013096a-167e-4894-8690-00fe05c776ce.webm)
 
 
  ## Credits
- [my Github:](https://www.github.com/).
- [My email:](mailto:).
-
- ## Instructions
- 
+ [my Github:](https://github.com/Grady253/e-commerce-back-end).
+ [My email:](mailto:grady.andre2@gmail.com).
 
  ## License
  
